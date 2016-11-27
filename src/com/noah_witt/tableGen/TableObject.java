@@ -1,9 +1,10 @@
 package com.noah_witt.tableGen;
 
+
 public class TableObject {
 	
 	int size;
-	int[][] arr;
+	private int[][] arr;
 	
 	public TableObject(int sizeL)
 	{
@@ -47,7 +48,7 @@ public class TableObject {
 		return true;
 	}
 	
-	private void importer(int[][] a)
+	public void importer(int[][] a)
 	{
 		for(int i=0; i<size; i++)
 		{
@@ -60,5 +61,17 @@ public class TableObject {
 	public TableObject duplicate()
 	{
 		return new TableObject(size,arr);
+	}
+	public int[][] getArray()
+	{
+		int[][] a = new int[size][size];
+		for(int i=0; i<size; i++)
+		{
+			for(int e=0; e<size; e++)
+			{
+				a[i][e] = arr[i][e];
+			}
+		}
+		return a;
 	}
 }

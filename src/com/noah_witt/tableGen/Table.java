@@ -219,96 +219,95 @@ public class Table {
 		
 		String newN="";
 		String cStore = c.toStringStore();
+		int[][] oldT = t.getArray();
 		//Move 0
 		c.setY(c.y()-3);
-		TableObject newT = t.duplicate();
-		if(newT.use(c))
+		if(t.use(c))
 		{
 			newN = n+"0";
-			v2recursion(d+1,c,newN,newT,start);
+			v2recursion(d+1,c,newN,t,start);
 		}
-		
+		t.importer(oldT);
 		c.fromStringStore(cStore);
 		
 		//Move 1
 		c.setY(c.y()-2);
 		c.setX(c.x()+2);
-		newT = t.duplicate();
-		if(newT.use(c))
+		if(t.use(c))
 		{
 			newN = n+"1";
-			v2recursion(d+1,c,newN,newT,start);
+			v2recursion(d+1,c,newN,t,start);
 		}
 		
+		t.importer(oldT);
 		c.fromStringStore(cStore);
 		
 		//Move 2
 		c.setX(c.x()+3);
-		newT = t.duplicate();
-		if(newT.use(c))
+		if(t.use(c))
 		{
 			newN = n+"2";
-			v2recursion(d+1,c,newN,newT,start);
+			v2recursion(d+1,c,newN,t,start);
 		}
 		
+		t.importer(oldT);
 		c.fromStringStore(cStore);
 		
 		//Move 3
 		c.setY(c.y()+2);
 		c.setX(c.x()+2);
-		newT = t.duplicate();
-		if(newT.use(c))
+		if(t.use(c))
 		{
 			newN = n+"3";
-			v2recursion(d+1,c,newN,newT,start);
+			v2recursion(d+1,c,newN,t,start);
 		}
 		
+		t.importer(oldT);
 		c.fromStringStore(cStore);
 		
 		//Move 4
 		c.setY(c.y()+3);
-		newT = t.duplicate();
-		if(newT.use(c))
+		if(t.use(c))
 		{
 			newN = n+"4";
-			v2recursion(d+1,c,newN,newT,start);
+			v2recursion(d+1,c,newN,t,start);
 		}
 		
+		t.importer(oldT);
 		c.fromStringStore(cStore);
 		
 		//Move 5
 		c.setY(c.y()+2);
 		c.setX(c.x()-2);
-		newT = t.duplicate();
-		if(newT.use(c))
+		if(t.use(c))
 		{
 			newN = n+"5";
-			v2recursion(d+1,c,newN,newT,start);
+			v2recursion(d+1,c,newN,t,start);
 		}
 		
+		t.importer(oldT);
 		c.fromStringStore(cStore);
 		
 		//Move 6
 		c.setX(c.x()-3);
-		newT = t.duplicate();
-		if(newT.use(c))
+		if(t.use(c))
 		{
 			newN = n+"6";
-			v2recursion(d+1,c,newN,newT,start);
+			v2recursion(d+1,c,newN,t,start);
 		}
 		
+		t.importer(oldT);
 		c.fromStringStore(cStore);
 		
 		//move 7
 		c.setY(c.y()-2);
 		c.setX(c.x()-2);
-		newT = t.duplicate();
-		if(newT.use(c))
+		if(t.use(c))
 		{
 			newN = n+"7";
-			v2recursion(d+1,c,newN,newT,start);
+			v2recursion(d+1,c,newN,t,start);
 		}
-		
+		t.importer(oldT);
 		c.fromStringStore(cStore);
 	}
 
