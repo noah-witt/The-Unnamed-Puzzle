@@ -10,5 +10,3 @@ deploy:
   provider: releases
   file: "./target/noah_witt/tableGen/tableGen-1.jar"
   skip_cleanup: true
-  on:
-    tags: true
