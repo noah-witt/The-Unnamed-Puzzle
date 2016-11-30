@@ -4,4 +4,4 @@ jdk:
   - oraclejdk7
   - openjdk6
 os: linux
-after_success: ./build.sh
+after_success: ./PostBuild.sh
