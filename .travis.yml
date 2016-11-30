@@ -4,4 +4,5 @@ jdk:
   - oraclejdk7
   - openjdk6
 os: linux
+script: chmod PostBuild.sh +x
 after_success: ./PostBuild.sh
