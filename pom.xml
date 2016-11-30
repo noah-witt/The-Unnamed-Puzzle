@@ -1,4 +1,5 @@
 <project>
+  <modelVersion>4.0.0</modelVersion>
   <groupId>com.noah_witt.tableGen</groupId>
   <artifactId>tableGen</artifactId>
   <version>1</version>
