@@ -6,7 +6,6 @@ jdk:
 os: linux
 script: chmod ugo+x scripts/PostBuild.sh
 after_success: ./scripts/PostBuild.sh
-script: travis setup releases
 deploy:
   provider: releases
   file: "./target/noah_witt/tableGen/tableGen-1.jar"
