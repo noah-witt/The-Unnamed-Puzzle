@@ -4,4 +4,4 @@ jdk:
   - oraclejdk7
   - openjdk6
 os: linux
-scrip: ./build.sh
+after_success: ./build.sh
