@@ -1,1 +1,5 @@
-mvn test
+<project>
+  <groupId>com.noah_witt.tableGen</groupId>
+  <artifactId>tableGen</artifactId>
+  <version>1</version>
+</project>
