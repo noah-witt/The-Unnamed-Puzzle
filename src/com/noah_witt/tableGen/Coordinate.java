@@ -33,6 +33,14 @@ public class Coordinate {
 		y = yL;
 		return y;
 	}
+	public int changeX(int c)
+	{
+		return x=x+c;
+	}
+	public int changeY(int c)
+	{
+		return y=y+c;
+	}
 	public String toString()
 	{
 		return "("+x+","+y+")";

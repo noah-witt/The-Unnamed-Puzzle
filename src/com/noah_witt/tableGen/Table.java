@@ -12,6 +12,10 @@ public class Table {
 	final static int size = 10;
 	final static int squelch =99;
 	final static boolean save=true;
+	private static int ans=0;
+	private static long startTime;
+	final private static int benchmarkN =5;
+	final private static boolean benchmark = false;
 	
 	/*
 	final static int x=0;
@@ -35,7 +39,12 @@ public class Table {
 		}
 		s.close();
 		
+		if(benchmark)
+		{
+			startTime = System.currentTimeMillis();
+		}
 		//run(start);
+		//run("0");
 		runV2();
 	}
 	
@@ -51,7 +60,7 @@ public class Table {
 		while(n.toString().length()<Math.pow(size, 2))
 		{
 			t.resetTable();
-			tryN(new Coordinate(5,5),Integer.toOctalString(n),t);
+			tryN(new Coordinate(0,0),Integer.toOctalString(n),t);
 			n++;
 		}
 		
@@ -152,6 +161,15 @@ public class Table {
 				
 				System.out.println("Places before error: "+i);
 				System.out.println("done with moves:"+n);
+				if(benchmark)
+				{
+					ans++;
+					if(ans==benchmarkN)
+					{
+						long endTime = System.currentTimeMillis();
+						System.out.println("Total execution time: " + (endTime-startTime) + "ms"); 
+					}
+				}
 			}
 		}
 	}
@@ -213,6 +231,15 @@ public class Table {
 					}
 				}
 			}
+			if(benchmark)
+			{
+				ans++;
+				if(ans==benchmarkN)
+				{
+					long endTime = System.currentTimeMillis();
+					System.out.println("Total execution time: " + (endTime-startTime) + "ms"); 
+				}
+			}
 			
 			System.out.println("PATH FOUND Starting at:"+start.toString()+" using path:"+n+"\n depth:"+d);
 		}
@@ -221,7 +248,8 @@ public class Table {
 		String cStore = c.toStringStore();
 		int[][] oldT = t.getArray();
 		//Move 0
-		c.setY(c.y()-3);
+		//c.setY(c.y()-3);
+		c.changeY(-3);
 		if(t.use(c))
 		{
 			newN = n+"0";
@@ -231,8 +259,10 @@ public class Table {
 		c.fromStringStore(cStore);
 		
 		//Move 1
-		c.setY(c.y()-2);
-		c.setX(c.x()+2);
+		//c.setY(c.y()-2);
+		//c.setX(c.x()+2);
+		c.changeY(-2);
+		c.changeX(+2);
 		if(t.use(c))
 		{
 			newN = n+"1";
@@ -243,7 +273,8 @@ public class Table {
 		c.fromStringStore(cStore);
 		
 		//Move 2
-		c.setX(c.x()+3);
+		//c.setX(c.x()+3);
+		c.changeX(3);
 		if(t.use(c))
 		{
 			newN = n+"2";
@@ -254,8 +285,10 @@ public class Table {
 		c.fromStringStore(cStore);
 		
 		//Move 3
-		c.setY(c.y()+2);
-		c.setX(c.x()+2);
+		//c.setY(c.y()+2);
+		//c.setX(c.x()+2);
+		c.changeY(2);
+		c.changeX(2);
 		if(t.use(c))
 		{
 			newN = n+"3";
@@ -266,7 +299,8 @@ public class Table {
 		c.fromStringStore(cStore);
 		
 		//Move 4
-		c.setY(c.y()+3);
+		//c.setY(c.y()+3);
+		c.changeY(3);
 		if(t.use(c))
 		{
 			newN = n+"4";
@@ -277,8 +311,10 @@ public class Table {
 		c.fromStringStore(cStore);
 		
 		//Move 5
-		c.setY(c.y()+2);
-		c.setX(c.x()-2);
+		//c.setY(c.y()+2);
+		//c.setX(c.x()-2);
+		c.changeY(2);
+		c.changeX(-2);
 		if(t.use(c))
 		{
 			newN = n+"5";
@@ -289,7 +325,8 @@ public class Table {
 		c.fromStringStore(cStore);
 		
 		//Move 6
-		c.setX(c.x()-3);
+		//c.setX(c.x()-3);
+		c.changeX(-3);
 		if(t.use(c))
 		{
 			newN = n+"6";
@@ -300,8 +337,10 @@ public class Table {
 		c.fromStringStore(cStore);
 		
 		//move 7
-		c.setY(c.y()-2);
-		c.setX(c.x()-2);
+		//c.setY(c.y()-2);
+		//c.setX(c.x()-2);
+		c.changeY(-2);
+		c.changeX(-2);
 		if(t.use(c))
 		{
 			newN = n+"7";
