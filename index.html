@@ -1,52 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="The-unnamed-puzzle : Attempting to solve a Hamiltonian path problem.">
+    <title>The Unnamed Puzzle by noah-witt</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>The-unnamed-puzzle</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>The Unnamed Puzzle</h1>
+        <p>Attempting to solve a Hamiltonian path problem.</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/noah-witt/The-Unnamed-Puzzle">View on GitHub</a>
+        <p class="view"><a href="https://github.com/noah-witt/The-Unnamed-Puzzle">View the Project on GitHub <small>noah-witt/The-Unnamed-Puzzle</small></a></p>
 
-          <h1 id="project_title">The-unnamed-puzzle</h1>
-          <h2 id="project_tagline">Attempting to solve a Hamiltonian path problem.</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/noah-witt/The-Unnamed-Puzzle/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/noah-witt/The-Unnamed-Puzzle/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+        <ul>
+          <li><a href="https://github.com/noah-witt/The-Unnamed-Puzzle/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/noah-witt/The-Unnamed-Puzzle/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/noah-witt/The-Unnamed-Puzzle">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
         <h1>
 <a id="the-unnamed-puzzle" class="anchor" href="#the-unnamed-puzzle" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The-Unnamed-Puzzle</h1>
 
 <p>Attempting to solve a Hamiltonian path problem.</p>
-      </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">The-unnamed-puzzle maintained by <a href="https://github.com/noah-witt">noah-witt</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+<h2>
+<a id="the-problem" class="anchor" href="#the-problem" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Problem</h2>
+
+<p>You have a 10 * 10 grid. You may start at any position on the grid, but may not land on the same spot twice. You can move any of 8 directions. The first 4 are directly up, down, left, or right, skipping two spots. You may also move 4 ways that are offset by the aforementioned moves by 45 degrees, but you skip only one spot on these moves. You must land in every square exactly once.</p>
+
+<h2>
+<a id="solve-ability" class="anchor" href="#solve-ability" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Solve ability</h2>
+
+<p>This problem is np-complete, and therefore is functionally impossible to solve. the number of possible move combinations is 100* 8^99 .Even at a blistering pace of 500,000 a second it would take 1.61* 10^75 centuries to complete.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/noah-witt">noah-witt</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-
+    <script src="javascripts/scale.fix.js"></script>
     
-
   </body>
 </html>
