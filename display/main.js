@@ -81,5 +81,5 @@ function go()
     //n= parseInt(n,16);
     //n=n.toString(8);
     //console.warn(n);
-    draw($("#y").val(),$("#x").val(),n);
+    draw($("#x").val(),$("#y").val(),n);
 }
